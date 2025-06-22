@@ -128,10 +128,10 @@
             //                    | GUI | LWR | ALT/ENT |   | HYPER/SPC | BKSP  | RSE |
 
             bindings = <
-&kp TAB         &kp Q         &kp W        &kp E           &kp R           &kp T        &kp Y      &kp U       &kp I            &kp O        &kp P                &backspace_or_delete
-&kp CAPS        &HMR LSHFT A  &mt LCTRL S  &mt LEFT_WIN D  &mt LEFT_ALT F  &kp G        &kp H      &mt RALT J  &mt RIGHT_WIN K  &mt RCTRL L  &mt RSHFT SEMICOLON  &kp SQT
-&tg_fl_laucher  &kp Z         &kp X        &kp C           &kp V           &kp B        &kp N      &kp M       &kp COMMA        &kp DOT      &kp FSLH             &kp ESC
-                                           &toggle_cmd     &sl 1           &kp ENTER    &kp SPACE  &sl 2       &kp PRINTSCREEN
+&kp TAB         &kp Q         &kp W         &kp E            &kp R            &kp T        &kp Y      &kp U        &kp I             &kp O         &kp P                 &backspace_or_delete
+&kp CAPS        &HMR LSHFT A  &HMR LCTRL S  &HMR LEFT_WIN D  &HMR LEFT_ALT F  &kp G        &kp H      &HMR RALT J  &HMR RIGHT_WIN K  &HMR RCTRL L  &HMR RSHFT SEMICOLON  &kp SQT
+&tg_fl_laucher  &kp Z         &kp X         &kp C            &kp V            &kp B        &kp N      &kp M        &kp COMMA         &kp DOT       &kp FSLH              &kp ESC
+                                            &toggle_cmd      &sl 1            &kp ENTER    &kp SPACE  &sl 2        &kp PRINTSCREEN
             >;
         };
 
