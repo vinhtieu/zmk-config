@@ -158,10 +158,10 @@
             //                    |     |     |    |                  |     |     |     |
 
             bindings = <
-&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6          &kp F7                          &kp F8                            &kp F9                                &kp F10          &kp F11            &kp F12
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp C_PREV                      &kp C_PLAY_PAUSE                  &kp C_NEXT                            &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &kp K_MUTE
-&trans      &trans        &trans        &trans        &trans        &trans          &tg_bt LS(LC(B)) LS(LA(LC(B)))  &tg_wifi LC(RS(W)) LC(LS(LA(W)))  &pwr_off LC(LA(LS(P))) LC(LA(LS(H)))  &trans           &trans             &tog 0
-                                        &trans        &trans        &trans          &trans                          &trans                            &trans
+&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6          &kp F7             &kp F8            &kp F9             &kp F10          &kp F11            &kp F12
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT         &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &kp K_MUTE
+&trans      &trans        &trans        &trans        &trans        &trans          &kp LC(LS(LA(B)))  &kp LC(RS(W))     &kp LC(LA(LS(P)))  &trans           &trans             &tog 0
+                                        &trans        &trans        &trans          &trans             &trans            &trans
             >;
         };
     };
