@@ -17,8 +17,8 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            quick-tap-ms = <175>;
-            tapping-term-ms = <280>;
+            quick-tap-ms = <170>;
+            tapping-term-ms = <220>;
             flavor = "tap-preferred";
             hold-trigger-on-release;
             hold-trigger-key-positions = <40 41 39 38 37 36 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29>;
