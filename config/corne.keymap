@@ -17,10 +17,9 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            quick-tap-ms = <170>;
-            tapping-term-ms = <220>;
+            quick-tap-ms = <150>;
+            tapping-term-ms = <150>;
             flavor = "tap-preferred";
-            hold-trigger-on-release;
             hold-trigger-key-positions = <40 41 39 38 37 36 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29>;
         };
 
@@ -117,6 +116,17 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        middle_click {
+            bindings = <&mkp MCLK>;
+            key-positions = <2 4>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -143,10 +153,10 @@
             //                     | GUI |     | ALT/ENT |   | HYPER/SPACE | BKSP |    |
 
             bindings = <
-&kp GRAVE  &mkp LCLK       &kp UP_ARROW    &mkp RCLK        &msc SCRL_LEFT   &kp PIPE                &kp BACKSLASH          &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS      &kp MINUS
-&trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &msc SCRL_RIGHT  &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK  &kp SLASH
-&kp LSHFT  &kp K_UNDO      &kp K_CUT       &kp K_COPY       &kp K_PASTE      &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER     &tog 0
-                                           &trans           &trans           &none                   &kp NUMBER_0           &kp PERIOD    &trans
+&kp GRAVE  &msc SCRL_LEFT   &mkp LCLK       &kp UP_ARROW    &mkp RCLK        &kp PIPE                &kp BACKSLASH          &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS      &kp MINUS
+&trans     &msc SCRL_RIGHT  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK  &kp SLASH
+&kp LSHFT  &kp K_UNDO       &kp K_CUT       &kp K_COPY      &kp K_PASTE      &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER     &tog 0
+                                            &trans          &trans           &none                   &kp NUMBER_0           &kp PERIOD    &trans
             >;
         };
 
