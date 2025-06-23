@@ -230,7 +230,7 @@
             bindings = <
 &trans  &trans          &trans     &trans      &trans       &trans    &trans  &mkp LCLK   &mv_sc_up  &mkp RCLK    &kp LC(L)  &trans
 &trans  &kp LEFT_SHIFT  &kp LCTRL  &trans      &trans       &trans    &trans  &mv_sc_lft  &mv_sc_dn  &mv_sc_rght  &trans     &trans
-&trans  &trans          &kp K_CUT  &kp K_COPY  &kp K_PASTE  &trans    &trans  &trans      &trans     &trans       &trans     &trans
+&trans  &trans          &kp K_CUT  &kp K_COPY  &kp K_PASTE  &trans    &trans  &trans      &trans     &trans       &trans     &to 0
                                    &trans      &trans       &trans    &trans  &trans      &trans
             >;
         };
