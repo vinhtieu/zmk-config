@@ -97,6 +97,42 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <150>;
         };
+
+        mv_sc_up: mv_sc_up {
+            compatible = "zmk,behavior-mod-morph";
+            label = "Mouse move or scroll up";
+            bindings = <&mmv MOVE_UP>, <&msc SCRL_UP>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        mv_sc_dn: mv_sc_dn {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MV_SC_DN";
+            bindings = <&mmv MOVE_DOWN>, <&msc SCRL_DOWN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        mv_sc_lft: mv_sc_lft {
+            compatible = "zmk,behavior-mod-morph";
+            label = "Mouse move or scroll left";
+            bindings = <&mmv MOVE_LEFT>, <&msc SCRL_LEFT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        mv_sc_rght: mv_sc_rght {
+            compatible = "zmk,behavior-mod-morph";
+            label = "Mouse move or scroll right";
+            bindings = <&mmv MOVE_RIGHT>, <&msc SCRL_RIGHT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     macros {
@@ -121,8 +157,20 @@
 
         middle_click {
             bindings = <&mkp MCLK>;
-            key-positions = <2 4>;
+            key-positions = <7 9>;
             timeout-ms = <50>;
+            layers = <4>;
+        };
+
+        to_nav_layer {
+            bindings = <&to 3>;
+            key-positions = <37 40>;
+            layers = <0 2 1 4 5 3>;
+        };
+
+        to_fn {
+            bindings = <&to 5>;
+            key-positions = <16 30>;
             layers = <0>;
         };
     };
@@ -145,7 +193,25 @@
             >;
         };
 
-        layer_below {
+        num_layer {
+            bindings = <
+&trans     &trans  &trans  &trans     &trans      &trans       &kp PLUS   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTERISK  &backspace_or_delete
+&trans     &trans  &trans  &kp COMMA  &kp PERIOD  &trans       &kp MINUS  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SLASH     &trans
+&kp LSHFT  &trans  &trans  &trans     &trans      &trans       &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &tog 0
+                           &trans     &to 1       &kp ENTER    &kp SPACE  &to 2         &trans
+            >;
+        };
+
+        sym_layer {
+            bindings = <
+&kp ESCAPE  &kp GRAVE        &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp PIPE         &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR     &trans             &trans
+&trans      &kp EXCLAMATION  &kp ASTERISK   &kp SLASH         &kp EQUAL          &kp AMPERSAND    &kp HASH     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &kp DOUBLE_QUOTES  &trans
+&trans      &kp TILDE        &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT      &kp AT_SIGN  &kp COLON             &kp COMMA              &kp PERIOD     &kp SQT            &to 0
+                                            &trans            &to 1              &trans           &trans       &to 2                 &trans
+            >;
+        };
+
+        nav_layer {
             // -----------------------------------------------------------------------------------------
             // |      |  !  |  @  |  #  |  $  |    %     |   |  ^  |  &  |  *  |  (  |  )  |   \   |
             // |      |  1  |  2  |  3  |  4  |    5     |   |  -  |  =  |  `  |  [  |  ]  |  "|"  |
@@ -153,14 +219,23 @@
             //                     | GUI |     | ALT/ENT |   | HYPER/SPACE | BKSP |    |
 
             bindings = <
-&kp GRAVE  &msc SCRL_LEFT   &mkp LCLK       &kp UP_ARROW    &mkp RCLK        &kp PIPE                &kp BACKSLASH          &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS      &kp MINUS
-&trans     &msc SCRL_RIGHT  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK  &kp SLASH
-&kp LSHFT  &kp K_UNDO       &kp K_CUT       &kp K_COPY      &kp K_PASTE      &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER     &tog 0
-                                            &trans          &trans           &none                   &kp NUMBER_0           &kp PERIOD    &trans
+&trans  &trans          &trans     &trans        &trans        &trans         &kp PG_UP      &kp HOME        &kp UP_ARROW    &kp END          &trans  &backspace_or_delete
+&trans  &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &mkp LCLK      &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans  &kp K_UNDO      &kp K_CUT  &kp K_COPY    &kp K_PASTE   &trans         &trans         &trans          &trans          &trans           &trans  &tog 0
+                                   &trans        &trans        &kp LG(TAB)    &kp SPACE      &to 4           &trans
             >;
         };
 
-        layer_above {
+        mouse_layer {
+            bindings = <
+&trans  &trans          &trans     &trans      &trans       &trans    &trans  &mkp LCLK   &mv_sc_up  &mkp RCLK    &kp LC(L)  &trans
+&trans  &kp LEFT_SHIFT  &kp LCTRL  &trans      &trans       &trans    &trans  &mv_sc_lft  &mv_sc_dn  &mv_sc_rght  &trans     &trans
+&trans  &trans          &kp K_CUT  &kp K_COPY  &kp K_PASTE  &trans    &trans  &trans      &trans     &trans       &trans     &trans
+                                   &trans      &trans       &trans    &trans  &trans      &trans
+            >;
+        };
+
+        fn_layer {
             // -----------------------------------------------------------------------------------------
             // |       |  F1  |  F2  |  F3  |  F4  |  F5 |            |  F6  |  F7  |  F8  |  F9  |  F10  |   |
             // |       | Prev | Next | Vol - | Vol + | Play/Pause |   |      | LFT | DWN |  UP | RGT |     |     |
