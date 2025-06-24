@@ -179,7 +179,6 @@
             key-positions = <13 14>;
             layers = <0>;
             slow-release;
-            timeout-ms = <500>;
         };
 
         LCTRL_Chord {
