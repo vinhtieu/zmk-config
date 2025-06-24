@@ -173,6 +173,49 @@
             key-positions = <16 30>;
             layers = <0>;
         };
+
+        LShift_Gate {
+            bindings = <&kp LEFT_SHIFT>;
+            key-positions = <13 14>;
+            layers = <0>;
+            slow-release;
+            timeout-ms = <500>;
+        };
+
+        LCTRL_Chord {
+            bindings = <&kp LCTRL>;
+            key-positions = <13 15>;
+        };
+
+        LALT_Chord {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <14 15>;
+        };
+
+        LGUI_Chord {
+            bindings = <&kp LWIN>;
+            key-positions = <13 16>;
+        };
+
+        RSHIFT_Chord {
+            bindings = <&kp RSHIFT>;
+            key-positions = <22 21>;
+        };
+
+        RCTRL_Chord {
+            bindings = <&kp RCTRL>;
+            key-positions = <20 22>;
+        };
+
+        RGUI_Chord {
+            bindings = <&kp RMETA>;
+            key-positions = <20 21>;
+        };
+
+        RALT_Chord {
+            bindings = <&kp RIGHT_ALT>;
+            key-positions = <19 22>;
+        };
     };
 
     keymap {
@@ -186,10 +229,10 @@
             //                    | GUI | LWR | ALT/ENT |   | HYPER/SPC | BKSP  | RSE |
 
             bindings = <
-&kp TAB         &kp Q         &kp W         &kp E            &kp R            &kp T        &kp Y      &kp U        &kp I             &kp O         &kp P                 &backspace_or_delete
-&kp CAPS        &HMR LSHFT A  &HMR LCTRL S  &HMR LEFT_WIN D  &HMR LEFT_ALT F  &kp G        &kp H      &HMR RALT J  &HMR RIGHT_WIN K  &HMR RCTRL L  &HMR RSHFT SEMICOLON  &kp SQT
-&tg_fl_laucher  &kp Z         &kp X         &kp C            &kp V            &kp B        &kp N      &kp M        &kp COMMA         &kp DOT       &kp FSLH              &kp ESC
-                                            &toggle_cmd      &sl 1            &kp ENTER    &kp SPACE  &sl 2        &kp PRINTSCREEN
+&kp TAB         &kp Q  &kp W  &kp E        &kp R  &kp T        &kp Y      &kp U  &kp I            &kp O    &kp P          &backspace_or_delete
+&kp CAPS        &kp A  &kp S  &kp D        &kp F  &kp G        &kp H      &kp J  &kp K            &kp L    &kp SEMICOLON  &kp SQT
+&tg_fl_laucher  &kp Z  &kp X  &kp C        &kp V  &kp B        &kp N      &kp M  &kp COMMA        &kp DOT  &kp FSLH       &kp ESC
+                              &toggle_cmd  &sl 1  &kp ENTER    &kp SPACE  &sl 2  &kp PRINTSCREEN
             >;
         };
 
