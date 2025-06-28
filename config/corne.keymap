@@ -153,7 +153,7 @@
         to_nav_layer {
             bindings = <&to 3>;
             key-positions = <37 40>;
-            layers = <0 2 1 4 5 3>;
+            layers = <0 1 4 5 3>;
         };
 
         to_fn {
@@ -219,7 +219,7 @@
 &kp TAB         &kp Q  &kp W  &kp E        &kp R  &kp T        &kp Y      &kp U  &kp I            &kp O    &kp P          &backspace_or_delete
 &kp CAPS        &kp A  &kp S  &kp D        &kp F  &kp G        &kp H      &kp J  &kp K            &kp L    &kp SEMICOLON  &kp SQT
 &tg_fl_laucher  &kp Z  &kp X  &kp C        &kp V  &kp B        &kp N      &kp M  &kp COMMA        &kp DOT  &kp FSLH       &kp ESC
-                              &toggle_cmd  &sl 1  &kp ENTER    &kp SPACE  &sl 2  &kp PRINTSCREEN
+                              &toggle_cmd  &sl 1  &kp ENTER    &kp SPACE  &sl 0  &kp PRINTSCREEN
             >;
         };
 
@@ -232,12 +232,12 @@
             >;
         };
 
-        sym_layer {
+        sym_lay {
             bindings = <
-&kp ESCAPE  &kp GRAVE        &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp PIPE         &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR     &trans             &trans
-&trans      &kp EXCLAMATION  &kp ASTERISK   &kp SLASH         &kp EQUAL          &kp AMPERSAND    &kp HASH     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &kp DOUBLE_QUOTES  &trans
-&trans      &kp TILDE        &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT      &kp AT_SIGN  &kp COLON             &kp COMMA              &kp PERIOD     &kp SQT            &to 0
-                                            &trans            &to 1              &kp ENTER        &kp SPACE    &to 2                 &trans
+&kp ESCAPE  &kp HASH         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS       &kp EQUAL          &kp CARET    &kp ASTERISK  &kp NON_US_BACKSLASH  &trans  &trans  &trans
+&trans      &kp EXCLAMATION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LEFT_BRACE  &kp RIGHT_BRACE    &kp PERCENT  &kp GRAVE     &trans                &trans  &trans  &trans
+&trans      &kp DOLLAR       &kp PLUS              &kp MINUS              &kp AMPERSAND   &kp PIPE           &kp AT_SIGN  &kp TILDE     &trans                &trans  &trans  &to 0
+                                                   &trans                 &to 1           &kp ENTER          &kp SPACE    &to 2         &trans
             >;
         };
 
