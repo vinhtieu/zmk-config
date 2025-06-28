@@ -227,7 +227,7 @@
             bindings = <
 &trans     &trans  &trans  &trans     &trans      &trans       &kp PLUS   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTERISK  &backspace_or_delete
 &trans     &trans  &trans  &kp COMMA  &kp PERIOD  &trans       &kp MINUS  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SLASH     &trans
-&kp LSHFT  &trans  &trans  &trans     &trans      &trans       &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &tog 0
+&kp LSHFT  &trans  &trans  &trans     &trans      &trans       &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &to 0
                            &trans     &to 1       &kp ENTER    &kp SPACE  &to 2         &trans
             >;
         };
@@ -251,7 +251,7 @@
             bindings = <
 &trans  &trans          &trans     &trans        &trans        &trans         &kp PG_UP      &kp HOME        &kp UP_ARROW    &kp END          &trans  &backspace_or_delete
 &trans  &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &mkp LCLK      &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans  &kp K_UNDO      &kp K_CUT  &kp K_COPY    &kp K_PASTE   &trans         &trans         &trans          &trans          &trans           &trans  &tog 0
+&trans  &kp K_UNDO      &kp K_CUT  &kp K_COPY    &kp K_PASTE   &trans         &trans         &trans          &trans          &trans           &trans  &to 0
                                    &trans        &trans        &kp LG(TAB)    &kp SPACE      &to 4           &trans
             >;
         };
@@ -275,7 +275,7 @@
             bindings = <
 &kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6          &kp F7             &kp F8            &kp F9             &kp F10          &kp F11            &kp F12
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT         &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &kp K_MUTE
-&trans      &trans        &trans        &trans        &trans        &trans          &kp LC(LS(LA(B)))  &kp LC(RS(W))     &kp LC(LA(LS(P)))  &trans           &trans             &tog 0
+&trans      &trans        &trans        &trans        &trans        &trans          &kp LC(LS(LA(B)))  &kp LC(RS(W))     &kp LC(LA(LS(P)))  &trans           &trans             &to 0
                                         &trans        &trans        &trans          &trans             &trans            &trans
             >;
         };
