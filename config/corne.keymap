@@ -228,7 +228,7 @@
 &trans     &trans  &trans  &trans     &trans      &trans       &kp PLUS   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTERISK  &backspace_or_delete
 &trans     &trans  &trans  &kp COMMA  &kp PERIOD  &trans       &kp MINUS  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SLASH     &trans
 &kp LSHFT  &trans  &trans  &trans     &trans      &trans       &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &to 0
-                           &trans     &to 1       &kp ENTER    &kp SPACE  &to 2         &trans
+                           &trans     &sl 1       &kp ENTER    &kp SPACE  &sl 2         &trans
             >;
         };
 
@@ -237,7 +237,7 @@
 &kp ESCAPE  &kp HASH         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS       &kp EQUAL          &kp CARET    &kp ASTERISK  &kp NON_US_BACKSLASH  &trans  &trans  &trans
 &trans      &kp EXCLAMATION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LEFT_BRACE  &kp RIGHT_BRACE    &kp PERCENT  &kp GRAVE     &trans                &trans  &trans  &trans
 &trans      &kp DOLLAR       &kp PLUS              &kp UNDERSCORE         &kp AMPERSAND   &kp PIPE           &kp AT_SIGN  &kp TILDE     &trans                &trans  &trans  &to 0
-                                                   &trans                 &to 1           &kp ENTER          &kp SPACE    &to 2         &trans
+                                                   &trans                 &sl 1           &kp ENTER          &kp SPACE    &to 2         &trans
             >;
         };
 
